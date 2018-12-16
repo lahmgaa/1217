@@ -1,0 +1,419 @@
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" >
+    <title>hello,moody</title>
+    <link href="https://fonts.googleapis.com/css?family=Jua&amp;subset=korean" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+    <style>
+        #monitor {width: 100px; height: 40px; background: red; position: fixed; right: 0px; line-height: 40px; color: white; z-index: 5; opacity: 0;}
+
+
+        body{background-color: white; height: 20350px;}
+        #div1 {width: 225px; height: 225px; position: absolute; top: 300px; left: calc(50% - 112.5px); z-index: 2;}
+        #moody {width: 225px; height: 225px; }
+        #moody:hover {cursor: pointer;}
+        #div2 {width: 225px; height: 225px; position: absolute; top: 300px; left: calc(50% - 112.5px); opacity: 1;}
+        #moody2 {width: 225px; height: 225px;  opacity: 1;}
+        #div3 {width: 100%; height: 412px; position: absolute; top: 0; left: 0; background-color: #393B3D; z-index: -1; opacity: 0; transition: 0.5s;}
+        #div4 {width: 100%; height: 20500px; position: absolute; top: 412px; left: 0; background-color: #393B3D; z-index: -1; opacity: 0; transition: 0.5s;}
+
+        #slo1 {width: 450px; height: 50px; position: absolute;  color: white; font-size: 2em;
+            font-family: 'Nanum Gothic', sans-serif; line-height: 50px; text-align: center; top: 150px; left: calc(50% - 225px); opacity: 0;}
+        #slo2 {width: 450px; height: 50px; position: absolute;  color: white; font-size: 2em;
+            font-family: 'Nanum Gothic', sans-serif; line-height: 50px; text-align: center; top: 620px; left: calc(50% - 225px); opacity: 0;}
+
+        #slo3 {width: 800px; height: 200px; position: absolute;  color: white; top: 1800px; left: calc(50% - 400px);
+            font-family: 'Jua', sans-serif; font-size: 3em; text-align: center; line-height: 70px;}
+        #div_mock {width: 300px; height: auto; position: absolute;  top: 2000px; left: calc(50% - 150px);}
+        #mock {width: 100%; height: auto;}
+		#mock_ex1 {width: 400px; height: auto; position: absolute; color: white;
+			font-family: 'Nanum Gothic', sans-serif; top: 2800px; left: calc(25% - 200px); font-size: 1.4em; line-height: 50px;  }
+		#mock_ex2 {width: 400px; height: auto; position: absolute; color: white;
+			font-family: 'Nanum Gothic', sans-serif; top:4000px; left: calc(80% - 200px); font-size: 1.4em; line-height: 50px;  }
+
+
+
+        #div_mock2 {width: 300px; height: auto; position: absolute;  top: 5600px; left: calc(50% - 150px); z-index: 2;}
+        #mock2 {width: 100%; height: auto;}
+        #div_mock3 {width: 300px; height: auto; position: absolute;  top: 5600px; left: calc(50% - 150px); }
+        #mock3 {width: 100%; height: auto;}
+        #div_mock4 {width: 300px; height: auto; position: absolute;  top: 5600px; left: calc(50% - 150px);}
+        #mock4 {width: 100%; height: auto;}
+        #hello {width: 1100px; height: auto; position: absolute; color: white;
+			font-family: 'Jua', sans-serif; top:8300px; left: calc(50% - 550px); font-size: 4em; line-height: 80px; text-align: center;}
+
+        #div_mock5 {width: 300px; height: auto; position: absolute;  top: 10000px; left: calc(47% - 150px);}
+        #mock5 {width: 100%; height: auto;}
+        #div_mock6 {width: 300px; height: auto; position: absolute;  top: 10000px; left: calc(52% - 150px);}
+        #mock6 {width: 100%; height: auto;}
+
+        #mode {width: 900px; height: auto; position: absolute; color: white;
+			font-family: 'Jua', sans-serif; top:11500px; left: calc(50% - 450px); font-size: 4em; line-height: 90px; text-align: center;}
+        #work7 {width: 230px; height: auto; position: absolute; color: white; z-index: 2; 
+			font-family: 'Nanum Gothic', sans-serif; top:12050px; left: calc(40% - 115px); font-size: 1.25em; font-weight: 500; line-height: 30px; text-align: justify; }
+        #work8 {width: 230px; height: auto; position: absolute; color: white; z-index: 2; 
+			font-family: 'Nanum Gothic', sans-serif; top:12000px; left: calc(40% - 115px); font-size: 1.3em; font-weight: bold; line-height: 25px; text-align: center;}
+        #work9 {width: 230px; height: auto; position: absolute; color: white; z-index: 2; 
+			font-family: 'Nanum Gothic', sans-serif; top:12050px; left: calc(60% - 115px); font-size: 1.25em; font-weight: 500; line-height: 30px; text-align: justify; }
+        #work10 {width: 230px; height: auto; position: absolute; color: white; z-index: 2; 
+			font-family: 'Nanum Gothic', sans-serif; top:12000px; left: calc(60% - 115px); font-size: 1.3em; font-weight: bold; line-height: 25px; text-align: center;}
+        #div_mock7 {width: 300px; height: auto; position: absolute;  top: 16000px; left: calc(50% - 150px); z-index: -1; }
+        #mock7 {width: 100%; height: auto;}
+        #div_mock8 {width: 300px; height: auto; position: absolute;  top: 16000px; left: calc(50% - 150px); z-index: -1; }
+        #mock8 {width: 100%; height: auto;}
+        #div_mock9 {width: 300px; height: auto; position: absolute;  top: 16000px; left: calc(50% - 150px); z-index: -1; }
+        #mock9 {width: 100%; height: auto;}
+        #div_mock10 {width: 300px; height: auto; position: absolute;  top: 16000px; left: calc(50% - 150px); }
+        #mock10 {width: 100%; height: auto;}
+        
+        #black {width: 100%; height: 2000px; background-color: black; position: absolute; top: 18500px; z-index: 2; left: 0;}
+        #work {width: 900px; height: auto; position: absolute; color: white; z-index: 2;
+			font-family: 'Jua', sans-serif; top:18700px; left: calc(50% - 450px); font-size: 3.2em; line-height: 90px; text-align: center;}
+        
+        #work1 {width: 230px; height: auto; position: absolute; color: white; z-index: 4;
+			font-family: 'Nanum Gothic', sans-serif; top:19000px; left: calc(30% - 115px); font-size: 1.3em; font-weight: bold; line-height: 25px; text-align: center; }
+        #work2 {width: 230px; height: auto; position: absolute; color: white; z-index: 4;
+			font-family: 'Nanum Gothic', sans-serif; top:19050px; left: calc(30% - 115px); font-size: 1.25em; font-weight: 500; line-height: 30px; text-align: justify; }
+        #work3 {width: 230px; height: auto; position: absolute; color: white; z-index: 4;
+			font-family: 'Nanum Gothic', sans-serif; top:19000px; left: calc(50% - 115px); font-size: 1.3em; font-weight: bold; line-height: 25px; text-align: center; }
+        #work4 {width: 230px; height: auto; position: absolute; color: white; z-index: 4;
+			font-family: 'Nanum Gothic', sans-serif; top:19050px; left: calc(50% - 115px); font-size: 1.25em; font-weight: 500; line-height: 30px; text-align: justify; }
+        #work5 {width: 230px; height: auto; position: absolute; color: white; z-index: 4;
+			font-family: 'Nanum Gothic', sans-serif; top:19000px; left: calc(70% - 115px); font-size: 1.3em; font-weight: bold; line-height: 25px; text-align: center;}
+        #work6 {width: 230px; height: auto; position: absolute; color: white; z-index: 4;
+            font-family: 'Nanum Gothic', sans-serif; top:19050px; left: calc(70% - 115px); font-size: 1.25em; font-weight: 500; line-height: 30px; text-align: justify; }
+        
+    
+        #more {width: 230px; height: 60px; position: absolute;  z-index: 2; border: 2px solid white; color:white;
+			font-family: 'Nanum Gothic', sans-serif; top:20800px; left: calc(50% - 115px); font-size: 1.2em; font-weight: bold; line-height: 60px; text-align: center;}
+        #more:hover {cursor: pointer; background-color: white; color: black; font-weight: bold;}
+        a:link {text-decoration: none;}
+
+        #div_proto1 {width: 200px; height: auto; position: absolute;  top: 18920px; left: calc(30% - 100px); z-index: 3; opacity: 0.2;}
+        #proto1 {width: 100%; height: auto;}
+        #div_proto2 {width: 200px; height: auto; position: absolute;  top: 18920px; left: calc(50% - 100px); z-index: 3; opacity: 0.2;}
+        #proto2 {width: 100%; height: auto;}
+        #div_proto3 {width: 200px; height: auto; position: absolute;  top: 18920px; left: calc(70% - 100px); z-index: 3; opacity: 0.2;}
+        #proto3 {width: 100%; height: auto;}
+
+        #div_tv {width: 800px; height: auto; position: absolute;  top: 20100px; left: calc(45% - 400px); z-index: 3;}
+        #tv {width: 100%; height: auto;}
+        #div_mac {width: 500px; height: auto; position: absolute;  top: 20300px; left: calc(65% - 250px); z-index: 3;}
+        #mac {width: 100%; height: auto;}
+        #div_phone {width: 100px; height: auto; position: absolute;  top: 20500px; left: calc(65% - 300px); z-index: 3;}
+        #phone {width: 100%; height: auto;}
+        #work11 {width: 400px; height: auto; position: absolute; color: white; z-index: 2;
+			font-family: 'Nanum Gothic', sans-serif; top:20000px; left: calc(50% - 200px); font-size: 2em; font-weight: 700; line-height: 30px; text-align: justify; }
+    </style>
+</head>
+
+<body>
+    <div id="monitor"></div>
+
+    <div id="div1"><img src="moody1.png" id="moody"> 
+    </div> 
+    <div id="div2"> <img src="moody2.png" id="moody2"> </div>
+    <div id="div3"></div>
+    <div id="div4"></div>
+    <div id="slo1">재택근무자에게 효율을!</div>
+    <div id="slo2">집돌이 집순이에게 자유를!</div>
+
+
+
+    <div id="slo3">좁아지는 집, <font color= "#E8DD48">분위기 변화</font>로<br> 근무의 공간과 여가의 공간을 나누어보세요.</div>
+    <div id="div_mock"><img src="mock.png" id="mock" width="746" height="1492"></div>
+	<div id="mock_ex1">
+		디스플레이 서비스 'moody'는 <br> 디스플레이의 공유와 연동을 더욱<br> 자유롭게 해줍니다.
+	</div>
+	<div id="mock_ex2">
+		공간을 구분지을 수 없거나 <br>집에서 불편함을 느낀다면 <br>moody 를 사용해 보세요.
+    </div>
+    
+    <div id="div_mock2"><img src="mock2.png" id="mock2" width="746" height="1492"></div>
+    <div id="div_mock3"><img src="mock3.png" id="mock3" width="746" height="1492"></div>
+    <div id="div_mock4"><img src="mock4.png" id="mock4" width="746" height="1492"></div>
+
+    <div id="hello"><font color= "#E8DD48">"안녕, 무디!"</font>
+        <br> <br>음성인식 서비스로 손쉽게 무디를 사용할 수 있습니다. 한층 더 발전된 <br>인공지능을 탑재한 무디를 경험해보세요.
+    </div>
+    
+    <div id="div_mock5"><img src="mock5.png" id="mock5" width="746" height="1492"></div>
+    <div id="div_mock6"><img src="mock6.png" id="mock6" width="746" height="1492"></div>
+    <div id="mode">자신에게 맞는 <font color= "#E8DD48">모드</font><br>자신이 정하는 <font color= "#E8DD48">무드</font></div>
+    <div id="work7">작업모드에서 무디는 <font color= "#E8DD48">작업에 최적화된 서비스</font>를 제공해줍니다. 다양한 앱을 추천해주기도 하며 반대로 방해되는 요소를 제어해주기도 합니다.</div>
+    <div id="work8"><font color= "#E8DD48">작업 모드</font></div>
+    <div id="work9">여가 모드에서 무디는 <font color= "#E8DD48">여가활동을 위한 컨텐츠 제공</font>과 유연한 여가활동을 위해 연락 연동 서비스, 쇼핑, 음식 등 집에서 최고의 휴식을 제공할 준비가 되어있습니다.</div>
+    <div id="work10"><font color= "#E8DD48">여가 모드</font></div>
+
+    <div id="div_mock7"><img src="mock7.png" id="mock7" width="746" height="1492"></div>
+    <div id="div_mock8"><img src="mock8.png" id="mock8" width="746" height="1492"></div>
+    <div id="div_mock9"><img src="mock9.png" id="mock9" width="746" height="1492"></div>
+    <div id="div_mock10"><img src="mock10.png" id="mock10" width="746" height="1492"></div>
+    <div id="black"></div>
+    <div id="work"><font color= "#E8DD48">자신이 만드는 자신의 근무환경</font></div>
+    <div id="work1"><font color= "#E8DD48">음악설정</font></div>
+    <div id="work2">자신이 사용하고있는 스트리밍 서비스와 연동하여 사용 가능합니다. 자신이 좋아하는 노래를 듣거나 작업에 도움이 되는 노래를 들으면서 작업 능률을 올려보세요.</div>
+    <div id="work3"><font color= "#E8DD48">조명설정</font></div>
+    <div id="work4">디스플레이 조명을 통해 무드를 설정할 수 있습니다. 모든 것을 자유롭게 설정해보세요. 다른 사용자의 모드를 사용해보는 것도 좋은 방법이 될 수 있습니다.</div>
+    <div id="work5"><font color= "#E8DD48">어플케어</font></div>
+    <div id="work6">작업에 필요 없는 어플은 꺼둘 수도 있고, 중요한 연락을 고정 할 수 도 있습니다. 말 한마디로 어플리케이션을 케어해보세요.</div>
+    <div id="div_proto1"><img src="proto1.png" id="proto1"></div>
+    <div id="div_proto2"><img src="proto2.png" id="proto2"></div>
+    <div id="div_proto3"><img src="proto3.png" id="proto3"></div>
+
+    <div id="more">
+        <a href="https://docs.google.com/presentation/d/1UkVgvHXeBMMidJrZ9p41UBBjayR_1EZBgTHLRuKMpPM/edit#slide=id.g4a81af1395_0_1273" > 
+            <font color="white"> 더 알아보기 </font> </a> </div>
+
+
+    <div id="div_tv"><img src="tv.png" id="tv" ></div>
+    <div id="div_mac"><img src="mac.png" id="mac" ></div>
+    <div id="div_phone"><img src="phone.png" id="phone" ></div>
+
+    <div id="work11">우리 집, 나만의 재택매니저</div>
+
+<script>
+    window.onscroll = function(){
+        var t = document.documentElement.scrollTop;
+        monitor.innerHTML = t + "px";
+
+        if (t < 1800){
+			div4.style.background = "#393B3D";
+			div_mock.style.position = "absolute";
+			div_mock.style.top = "2000px";
+        }else if(t < 3864){
+            div4.style.background = "#1A1B1C"
+			div_mock.style.position = "fixed";
+			div_mock.style.top = "150px";
+        }else if(t < 4100){
+            div4.style.background = "#1A1B1C";
+			div_mock.style.position = "absolute";
+			div_mock.style.top = "4014px";
+		}else if(t<5400){
+			div4.style.background = "#0A0A0A";
+            div_mock2.style.position = "absolute";
+            div_mock2.style.top = "5600px";
+            div_mock3.style.position = "absolute";
+            div_mock3.style.top = "5600px";
+            div_mock4.style.position = "absolute";
+            div_mock4.style.top = "5600px";
+		}else if(t<6000){
+            div_mock2.style.position = "fixed";
+            div_mock2.style.top = "150px";
+            div_mock3.style.position = "fixed";
+            div_mock3.style.top = "150px";
+            div_mock4.style.position = "fixed";
+            div_mock4.style.top = "150px";
+            div_mock3.style.left = "calc(50% - 150px)";
+            div_mock4.style.left = "calc(50% - 150px)";
+            div_mock3.style.transition = "0s";
+            div_mock4.style.transition = "0s";
+        }else if(t<6300){
+            div_mock3.style.left = "calc(50% - 150px)";
+            div_mock4.style.left = "calc(50% - 150px)";
+            div_mock3.style.transition = "0.5s";
+            div_mock4.style.transition = "0.5s";
+        }else if(t<7200){
+            div_mock2.style.position = "fixed";
+            div_mock2.style.top = "150px";
+            div_mock3.style.position = "fixed";
+            div_mock3.style.top = "150px";
+            div_mock4.style.position = "fixed";
+            div_mock4.style.top = "150px";
+            div_mock3.style.left = "calc(30% - 150px)";
+            div_mock4.style.left = "calc(70% - 150px)";
+            div_mock3.style.transition = "0.5s";
+            div_mock4.style.transition = "0.5s";
+        }else if(t<7300){
+            div_mock2.style.position = "absolute";
+            div_mock2.style.top = "7350px";
+            div_mock3.style.position = "absolute";
+            div_mock3.style.top = "7350px";
+            div_mock4.style.position = "absolute";
+            div_mock4.style.top = "7350px";
+            div_mock3.style.transition = "0s";
+            div_mock4.style.transition = "0s";
+            div4.style.background = "#0c1823";
+
+            
+        }else if(t<9800){
+            div4.style.background = "#0A0A0A"
+            div_mock5.style.position = "absolute";
+            div_mock5.style.top = "10000px";
+            div_mock6.style.position = "absolute";
+            div_mock6.style.top = "10000px";
+            div_mock5.style.left = "calc(47% - 150px)";
+            div_mock6.style.left = "calc(52% - 150px)";
+            div_mock5.style.transition = "0s";
+            div_mock6.style.transition = "0s";
+        }else if(t<10200){
+            div_mock5.style.position = "fixed";
+            div_mock5.style.top = "150px";
+            div_mock6.style.position = "fixed";
+            div_mock6.style.top = "150px";
+            div_mock5.style.transition = "0s";
+            div_mock6.style.transition = "0s";
+            div_mock5.style.width = "300px";
+            div_mock6.style.width = "300px";
+        }else if(t<11300){
+            div_mock5.style.top = "100px";
+            div_mock6.style.top = "100px";
+            div_mock5.style.width = "400px";
+            div_mock6.style.width = "400px";
+            div_mock5.style.left = "calc(15% - 200px)";
+            div_mock6.style.left = "calc(85% - 200px)";
+            div_mock5.style.transition = "0.5s";
+            div_mock6.style.transition = "0.5s";
+            mode.style.position = "absolute";
+            mode.style.top = "11500px";
+            work7.style.position = "absolute";
+            work8.style.position = "absolute";
+            work9.style.position = "absolute";
+            work10.style.position = "absolute";
+            work7.style.top = "12000px";
+            work8.style.top = "12000px";
+            work9.style.top = "12000px";
+            work10.style.top = "12000px";
+        }else if(t<12500){ 
+            mode.style.position = "fixed";
+            mode.style.top = "170px";
+            work7.style.position = "fixed";
+            work8.style.position = "fixed";
+            work9.style.position = "fixed";
+            work10.style.position = "fixed";
+            work7.style.top = "500px";
+            work8.style.top = "450px";
+            work9.style.top = "500px";
+            work10.style.top = "450px";
+            work7.style.opacity = "1";
+            work8.style.opacity = "1";
+            work9.style.opacity = "1";
+            work10.style.opacity = "1";
+            
+        }else if(t<14500){ 
+            mode.style.position = "absolute";
+            mode.style.top = "12670px";
+            
+            work7.style.position = "absolute";
+            work8.style.position = "absolute";
+            work9.style.position = "absolute";
+            work10.style.position = "absolute";
+            work7.style.top = "13000px";
+            work8.style.top = "12950px";
+            work9.style.top = "13000px";
+            work10.style.top = "12950px";
+
+            div_mock6.style.position = "absolute";
+            div_mock6.style.top = "12600px";
+            div_mock5.style.transition = "0s";
+            div_mock6.style.transition = "0s";
+            div_mock5.style.opacity = "1";
+            div4.style.background = "#0A0A0A";
+        }else if(t<14800){ 
+            div4.style.background = "#000000"
+            div_mock5.style.width = "1000px";
+            div_mock5.style.left = "calc(50% - 500px)";
+            div_mock5.style.top = "calc(70%)";
+            
+            div_mock5.style.transition = "0.5s";
+
+            div_mock7.style.left = "calc(50% - 150px)";
+            div_mock8.style.left = "calc(50% - 150px)";
+            div_mock9.style.left = "calc(50% - 150px)";
+            div_mock10.style.left = "calc(50% - 150px)";
+            div_mock7.style.position = "fixed";
+            div_mock7.style.top = "900px";
+            div_mock8.style.position = "fixed";
+            div_mock8.style.top = "900px";
+            div_mock9.style.position = "fixed";
+            div_mock9.style.top = "900px";
+            div_mock10.style.position = "fixed";
+            div_mock10.style.top = "900px";
+            div_mock7.style.opacity = "0";
+            div_mock8.style.opacity = "0";
+            div_mock9.style.opacity = "0";
+            div_mock10.style.opacity = "0";
+        }else if(t<16000){
+            div_mock5.style.opacity = "0.15";
+        }else if(t<16100){
+            div_mock7.style.left = "calc(20% - 150px)";
+            div_mock7.style.position = "fixed";
+            div_mock7.style.top = "150px";
+            div_mock7.style.transition = "0.5s";
+            div_mock7.style.opacity = "1";
+            div_mock7.style.zIndex = "1";
+        }else if(t<16200){
+            div_mock8.style.left = "calc(40% - 150px)";
+            div_mock8.style.position = "fixed";
+            div_mock8.style.top = "150px";
+            div_mock8.style.transition = "0.5s";
+            div_mock8.style.opacity = "1";
+            div_mock8.style.zIndex = "1";
+        }else if(t<16300){
+            div_mock9.style.left = "calc(60% - 150px)";
+            div_mock9.style.position = "fixed";
+            div_mock9.style.top = "150px";
+            div_mock9.style.transition = "0.5s";
+            div_mock9.style.opacity = "1";
+            div_mock9.style.zIndex = "1";
+        }else if(t<17500){
+            div_mock10.style.left = "calc(80% - 150px)";
+            div_mock10.style.position = "fixed";
+            div_mock10.style.top = "150px";
+            div_mock10.style.transition = "0.5s";
+            div_mock10.style.opacity = "1";
+            div_mock10.style.zIndex = "1";
+        }else if(t<18500){
+            div_mock7.style.position = "absolute";
+            div_mock8.style.position = "absolute";
+            div_mock9.style.position = "absolute";
+            div_mock10.style.position = "absolute";
+            div_mock7.style.top = "17650px";
+            div_mock8.style.top = "17650px";
+            div_mock9.style.top = "17650px";
+            div_mock10.style.top = "17650px";
+            div_mock7.style.transition = "0s";
+            div_mock8.style.transition = "0s";
+            div_mock9.style.transition = "0s";
+            div_mock10.style.transition = "0s";
+            div_mock5.style.position = "absolute";
+            div_mock5.style.top = "18170px";
+            div_mock5.style.transition = "0s";
+        }else if(t<21000){
+            
+        }
+}
+
+    var toggle = "off";
+
+    moody.onclick = function(){
+        if(toggle == "off"){
+            div1.style.opacity = 0;
+            div2.style.opacity = 1;
+            div3.style.opacity = 1;
+            div4.style.opacity = 1;
+            slo1.style.opacity = 1;
+            slo2.style.opacity = 1;
+
+            toggle = "on";
+        }else{
+            div1.style.opacity = 1;
+            div2.style.opacity = 0;
+            div3.style.opacity = 0;
+            div4.style.opacity = 0;
+            slo1.style.opacity = 0;
+            slo2.style.opacity = 0;
+
+            toggle = "off";
+
+        }
+    }
+</script>
+</body>
+
+</html>
